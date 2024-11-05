@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    kotlin("kapt")
+    id("kotlin-kapt")
 }
 
 android {
@@ -9,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.rpgapp"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -61,13 +63,29 @@ dependencies {
         implementation(libs.ui.graphics)
         implementation(libs.ui.tooling.preview)
         implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.junit.ktx)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.core.ktx)
-    testImplementation(libs.junit.junit)
-    androidTestImplementation(libs.junit.junit)
+        implementation(libs.androidx.core.ktx)
+        implementation(libs.androidx.junit.ktx)
+        implementation(libs.material)
+        implementation(libs.androidx.activity)
+        implementation(libs.androidx.constraintlayout)
+        implementation(libs.core.ktx)
+        implementation(libs.androidx.core)
+        implementation(libs.androidx.core)
+        implementation(libs.androidx.room.common)
+        implementation(libs.androidx.room.runtime.android)
+        testImplementation(libs.junit.junit)
+        androidTestImplementation(libs.junit.junit)
+
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    kapt("androidx.room:room-compiler:2.6.1")
+
+    // Coroutines para Android e Core
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+
+
 
     // Ferramentas de teste e depuração do Compose
         debugImplementation(libs.ui.tooling)

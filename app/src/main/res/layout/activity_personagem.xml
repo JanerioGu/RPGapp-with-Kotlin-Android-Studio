@@ -58,7 +58,31 @@
             android:textStyle="bold"
             android:padding="16dp"
             android:text="Exibir Vida"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/button_atualizar_personagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:text="Atualizar Personagem"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/button_deletar_personagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:text="Deletar Personagem"
+            android:layout_marginBottom="16dp" />
 
     </LinearLayout>
 </ScrollView>
